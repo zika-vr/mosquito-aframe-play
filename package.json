@@ -9,6 +9,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "aframe": "^0.3.2"
+    "aframe": "^0.3.2",
+    "d3": "^4.2.7"
   }
 }

@@ -4,11 +4,52 @@
     <meta charset="utf-8">
     <title>Panorama</title>
     <meta name="description" content="Panorama — A-Frame">
-    <script src="../../../dist/aframe.js"></script>
+    <script src="node_modules/aframe/dist/aframe.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.min.js"></script>
   </head>
   <body>
     <a-scene>
-      <a-sky src="puydesancy.jpg" rotation="0 -130 0"></a-sky>
+      <a-assets>
+        <img id="highlight1" src="radial-highlight.png">
+        <img id="shadow3" src="radial-shadow-3.png">
+        <img id="mosquito" src="mosquito.png">
+      </a-assets>
+      <a-entity>
+        <a-entity position="0 2 -10">
+          <a-image src="#mosquito" rotation="0 0 0" scale="1 1 1"></a-image>
+        </a-entity>
+        <a-animation
+          attribute="rotation"
+          dur="10000"
+          fill="forwards"
+          to="0 360 0"
+          repeat="indefinite"></a-animation>
+      </a-entity>
+      <a-entity>
+        <a-entity position="0 4 -15">
+          <a-image src="#mosquito" rotation="0 0 0" scale="0.5 0.5 0.5"></a-image>
+        </a-entity>
+        <a-animation
+          attribute="rotation"
+          dur="10000"
+          fill="forwards"
+          to="0 1080 0"
+          repeat="indefinite"></a-animation>
+      </a-entity>
+      <a-entity>
+        <a-entity position="2 7 -20">
+          <a-image src="#mosquito" rotation="0 0 0" scale="0.5 0.5 0.5"></a-image>
+        </a-entity>
+        <a-animation
+          attribute="rotation"
+          dur="10000"
+          fill="forwards"
+          to="90 1080 90"
+          repeat="indefinite"></a-animation>
+      </a-entity>
+
+      <a-sky src="pano.jpg"></a-sky>
     </a-scene>
+    <script src="index.js"></script>
   </body>
 </html>
